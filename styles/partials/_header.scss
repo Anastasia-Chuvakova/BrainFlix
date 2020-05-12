@@ -1,0 +1,16 @@
+// <header className="App-header">
+// <nav className="header__link">
+//   <img src="#" className="header__img" alt="img" />
+//   <h1 className="header__logo">BrainFlix</h1>
+// </nav>
+// <div className="header__search">
+//   <input className="search" placeholder="Search..." />
+// </div>
+// <button className="header__button"> + upload</button>
+// <img src="#" className="header__icon" alt="icon" />
+// <div />
+// </header>
+
+.header__wrapper {
+  @include mobile-breakpoint;
+}
