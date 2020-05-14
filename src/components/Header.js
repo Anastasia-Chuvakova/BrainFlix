@@ -5,7 +5,7 @@ function Header() {
     <header className="header__wrapper">
       <nav className="header__link">
         <img
-          src="...\assets\Logo\Logo-brainflix.png"
+          src={require("../assets/Logo/Logo-brainflix.png")}
           className="header__img"
           alt="img"
         />
@@ -14,7 +14,11 @@ function Header() {
         <input className="search" placeholder="Search..." />
       </div>
       <button className="header__button"> + upload</button>
-      <img src="#" className="header__icon" alt="icon" />
+      <img
+        src={require("../assets/Icons/PNG/userico.png")}
+        className="header__icon"
+        alt="icon"
+      />
       <div />
     </header>
   );

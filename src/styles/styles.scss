@@ -1,0 +1,65 @@
+@import "partials/_globalVariables";
+@import "partials/_mixins";
+@import "partials/_header";
+html {
+  box-sizing: border-box;
+}
+@function px-to-rem($px) {
+  @return ($px / 16) + rem;
+}
+
+@include mobile-breakpoint {
+  .header__wrapper {
+    font-size: px-to-rem(24);
+    line-height: px-to-rem(32);
+  }
+
+  .subheader {
+    font-size: px-to-rem(14);
+    line-height: px-to-rem(22);
+  }
+  .paragraph {
+    font-size: px-to-rem(13);
+    line-height: px-to-rem(18);
+  }
+  .info {
+    font-size: px-to-rem(13);
+    line-height: px-to-rem(18);
+  }
+  .labels {
+    font-size: px-to-rem(12);
+    line-height: px-to-rem(20);
+    color: $silver;
+    text-transform: uppercase;
+  }
+}
+
+@include tablet-breakpoint {
+  h1.header {
+    font-size: px-to-rem(36);
+    line-height: px-to-rem(44);
+  }
+  h2.header {
+    font-size: px-to-rem(24);
+    line-height: px-to-rem(32);
+  }
+  .subheader {
+    font-size: px-to-rem(16);
+    line-height: px-to-rem(68);
+  }
+  .paragraph {
+    font-size: px-to-rem(14);
+    line-height: px-to-rem(22);
+  }
+  .info {
+    font-size: px-to-rem(14);
+    line-height: px-to-rem(20);
+  }
+}
+
+@include desktop-breakpoint {
+  header {
+    font-size: px-to-rem(60);
+    line-height: px-to-rem(68);
+  }
+}

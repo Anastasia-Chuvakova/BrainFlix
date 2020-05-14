@@ -2,8 +2,9 @@ import React from "react";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Comments from "./components/Comments";
+import Footer from "./Footer";
 
-//import './App.css';
+import "./styles/styles.css";
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
           <Comments />
         </section>
       </main>
-      <footer></footer>
+      <Footer />
     </div>
   );
 }
