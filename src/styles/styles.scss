@@ -63,3 +63,13 @@ html {
     line-height: px-to-rem(68);
   }
 }
+
+.header__search {
+  .search {
+    background-image: url(../assets/Icons/PNG/Icon-search.png);
+    background-position: 5px 50%;
+    background-repeat: no-repeat;
+    background-size: auto 80%;
+    padding-left: 30px;
+  }
+}

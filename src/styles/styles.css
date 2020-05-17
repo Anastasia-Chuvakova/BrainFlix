@@ -74,4 +74,12 @@ html {
     line-height: 4.25rem;
   }
 }
+
+.header__search .search {
+  background-image: url(../assets/Icons/PNG/Icon-search.png);
+  background-position: 5px 50%;
+  background-repeat: no-repeat;
+  background-size: auto 80%;
+  padding-left: 30px;
+}
 /*# sourceMappingURL=styles.css.map */

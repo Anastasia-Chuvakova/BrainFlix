@@ -11,7 +11,7 @@ function Header() {
         />
       </nav>
       <div className="header__search">
-        <input className="search" placeholder="Search..." />
+        <input className="search" placeholder="search"></input>
       </div>
       <button className="header__button"> + upload</button>
       <img

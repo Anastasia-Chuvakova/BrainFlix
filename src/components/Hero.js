@@ -6,7 +6,7 @@ function Hero() {
   return (
     <>
       <HeroItems />
-      <HeroFunc />
+      {/* <HeroFunc /> */}
     </>
   );
 }
