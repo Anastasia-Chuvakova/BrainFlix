@@ -1,0 +1,57 @@
+.comments__wrapper {
+  @include mobile-breakpoint {
+    display: flex;
+    margin: 0 16px 0 16px;
+  }
+  @include tablet-breakpoint {
+    margin: 0 24px 0 24px;
+  }
+}
+.Userlist {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  .users__icon img {
+    @include mobile-breakpoint {
+      object-fit: contain;
+      max-width: 5%;
+    }
+  }
+}
+
+.comment__wrapper {
+  display: flex;
+  border-bottom: 1px solid $silver;
+
+  @include mobile-breakpoint {
+    margin-bottom: 24px;
+  }
+
+  &__container {
+    @include mobile-breakpoint {
+      display: flex;
+      flex-direction: row;
+      margin-top: 24px;
+    }
+
+    &__info {
+      @include mobile-breakpoint {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+  }
+}
+.users__icon {
+  @include mobile-breakpoint {
+    // display: flex;
+    object-fit: contain;
+    img {
+      max-width: 3rem;
+      @include tablet-breakpoint {
+        margin-right: 16px;
+      }
+    }
+  }
+}

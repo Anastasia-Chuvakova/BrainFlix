@@ -5,16 +5,17 @@ export class UserItems extends Component {
   render() {
     return (
       <>
-        <div>
-          <img src={this.props.userList.image} />
-        </div>
-
-        <div className="form__wrapper">
-          <div>
-            <h2>{this.props.userList.name}</h2>
-            <h2>{this.props.userList.date}</h2>
+        <div className="comment__wrapper">
+          <div className="users__icon">
+            <img src={this.props.userList.image} />
           </div>
-          <h4>{this.props.userList.comments}</h4>
+          <div className="comment__conainer">
+            <div className="comment__info">
+              <h2>{this.props.userList.name}</h2>
+              <h2>{this.props.userList.date}</h2>
+            </div>
+            <h4>{this.props.userList.comment}</h4>
+          </div>
         </div>
       </>
     );
@@ -23,7 +24,7 @@ export class UserItems extends Component {
 
 //PropTypes
 UserItems.propTypes = {
-  userLists: PropTypes.array.isRequired,
+  userList: PropTypes.object.isRequired,
 };
 
 export default UserItems;

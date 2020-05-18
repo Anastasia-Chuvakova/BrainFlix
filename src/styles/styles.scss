@@ -1,6 +1,10 @@
 @import "partials/_globalVariables";
 @import "partials/_mixins";
 @import "partials/_header";
+@import "partials/videoStyles";
+@import "partials/commentsStyles";
+@import "partials/_hero";
+
 html {
   box-sizing: border-box;
 }
@@ -64,12 +68,11 @@ html {
   }
 }
 
-.header__search {
-  .search {
-    background-image: url(../assets/Icons/PNG/Icon-search.png);
-    background-position: 5px 50%;
-    background-repeat: no-repeat;
-    background-size: auto 80%;
-    padding-left: 30px;
-  }
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  display: flex;
 }

@@ -1,0 +1,19 @@
+.hero__article {
+  @include mobile-breakpoint {
+    margin: 0 16px 0 16px;
+  }
+}
+
+// .likes {
+//   background-image: url(../assets/Icons/PNG/Icon-views.png);
+//   object-fit: contain;
+// }
+.paragraph {
+  @include mobile-breakpoint {
+    margin: 24px 0 40px 0;
+    color: $black;
+    h4 {
+      font-family: $regular;
+    }
+  }
+}

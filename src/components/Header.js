@@ -11,15 +11,16 @@ function Header() {
         />
       </nav>
       <div className="header__search">
-        <input className="search" placeholder="search"></input>
+        <textarea className="search-box" placeholder="search"></textarea>
       </div>
-      <button className="header__button"> + upload</button>
-      <img
-        src={require("../assets/Icons/PNG/userico.png")}
-        className="header__icon"
-        alt="icon"
-      />
-      <div />
+      <div className="header__end">
+        <button className="header__button"> + upload</button>
+        <img
+          src={require("../assets/Icons/PNG/userico.png")}
+          className="user__icon"
+          alt="icon"
+        />
+      </div>
     </header>
   );
 }

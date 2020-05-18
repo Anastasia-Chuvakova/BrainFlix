@@ -1,5 +1,7 @@
 import React from "react";
 import UserLists from "./UserLists";
+// import Moment from "react-moment";
+// import "moment-timezone";
 
 // array of data to loop through
 class Users extends React.Component {
@@ -37,14 +39,4 @@ class Users extends React.Component {
     );
   }
 }
-
-// function Comments() {
-//   return (
-//     <div className="comments__wrapper">
-//       <CommentForm />
-//       <Userlist users={userArr} />
-//     </div>
-//   );
-// }
-
 export default Users;

@@ -1,0 +1,43 @@
+.VideoList {
+  @include mobile-breakpoint {
+    margin: 0 16px 0 16px;
+  }
+  @include tablet-breakpoint {
+    margin: 0 24px 0 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+  }
+}
+.side__wrapper {
+  @include mobile-breakpoint {
+    display: flex;
+  }
+}
+.side__videos {
+  @include mobile-breakpoint {
+    //max-width: auto;
+    display: flex;
+    margin: 0 16px 0 16px;
+  }
+}
+.side__info {
+  display: flex;
+  @include mobile-breakpoint {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.side__videos img {
+  //display: flex;
+  object-fit: contain;
+  max-width: 10%;
+}
+
+.main-video img {
+  display: flex;
+  object-fit: contain;
+  max-width: 10%;
+}
