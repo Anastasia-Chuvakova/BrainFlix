@@ -79,3 +79,13 @@ h5 {
   margin: 0;
   display: flex;
 }
+
+.text__container {
+  @include mobile-breakpoint {
+    display: flex;
+    flex-direction: column;
+  }
+  @include desktop-breakpoint {
+    flex-direction: row;
+  }
+}

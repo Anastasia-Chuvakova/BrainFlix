@@ -12,6 +12,9 @@
     margin: 0 24px 0 24px;
     height: 80px;
   }
+  @include desktop-breakpoint {
+    margin: 0 200px 0 200px;
+  }
 }
 
 .header {

@@ -29,6 +29,3 @@ VideoItems.propTypes = {
   videoList: PropTypes.object.isRequired,
 };
 export default VideoItems;
-
-//videoList.splice(mainVideoIndex, 1);
-/* <img src={this.props.videolist.image} /> */
