@@ -11,7 +11,7 @@ function Header() {
         />
       </nav>
       <div className="header__search">
-        <textarea className="search-box" placeholder="search"></textarea>
+        <textarea className="search-box" placeholder="Search"></textarea>
       </div>
       <div className="header__end">
         <button className="header__button"> + upload</button>

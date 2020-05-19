@@ -3,8 +3,10 @@ import HeroChild from "./HeroChild";
 
 class HeroFunc extends React.Component {
   state = {
+    views: 1001023,
     likes: 110985,
   };
+
   handleClick = (clickEvent) => {
     clickEvent.preventDefault();
     const formId = clickEvent.target.id;
@@ -23,7 +25,11 @@ class HeroFunc extends React.Component {
   render() {
     return (
       <>
-        <HeroChild count={this.state.likes} handleClick={this.handleClick} />
+        <HeroChild
+          likeCount={this.state.likes}
+          viewCount={this.state.views}
+          handleClick={this.handleClick}
+        />
       </>
     );
   }

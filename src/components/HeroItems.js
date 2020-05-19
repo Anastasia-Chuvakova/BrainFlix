@@ -4,24 +4,35 @@ import HeroFunc from "./HeroFunc";
 
 function HeroItems() {
   return (
-    <div className="hero__text">
-      <div className="hero__article">
-        <h1 className="header">BMX Rampage: 2018 Highlights</h1>
-        <h2 className="subheader">By Red Cow</h2>
-        <h5 className="labels">12/18/2018</h5>
-        <form id="likes">
-          <button className="views-btn">
-            <img
-              src={require("../assets/Icons/PNG/Icon-views.png")}
-              className="view__img"
-              alt="img"
-            />
-          </button>
-          <h5>1,001,023</h5>
-        </form>
+    <div className="hero__article">
+      <div className="hero__video">
+        <video
+          controls
+          poster={require("./../assets/Images/video-list-0.jpg")}
+          className="hero__mainVideo"
+          width="100%"
+          height="100%"
+          controls
+        >
+          <source
+            src={require("./../assets/Video/BrainStation Sample Video.mp4")}
+            type="video/mp4"
+          ></source>
+        </video>
+      </div>
 
-        <HeroFunc />
-        <h4 className="paragraph">
+      <div className="hero__text">
+        <h1 className="hero__header">BMX Rampage: 2018 Highlights</h1>
+        <div className="hero__info">
+          <div className="hero__nameDate">
+            <h2 className="hero__subheader subheader">By Red Cow</h2>
+            <h5 className="hero__labels labels">12/18/2018</h5>
+          </div>
+
+          <HeroFunc />
+        </div>
+
+        <h4 className="hero__paragraph paragraph">
           On a gusty day in Southern Utah, a group of 25 daring mountain bikers
           blew the doors off what is possible on two wheels, unleashing some of
           the biggest moments the sport has ever seen. While mother nature only

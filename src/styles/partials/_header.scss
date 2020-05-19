@@ -1,16 +1,3 @@
-// <header className="App-header">
-// <nav className="header__link">
-//   <img src="#" className="header__img" alt="img" />
-//   <h1 className="header__logo">BrainFlix</h1>
-// </nav>
-// <div className="header__search">
-//   <input className="search" placeholder="Search..." />
-// </div>
-// <button className="header__button"> + upload</button>
-// <img src="#" className="header__icon" alt="icon" />
-// <div />
-// </header>
-
 .header__wrapper {
   @include mobile-breakpoint {
     margin: 0 16px 0 16px;
@@ -23,6 +10,7 @@
   @include tablet-breakpoint {
     flex-direction: row;
     margin: 0 24px 0 24px;
+    height: 80px;
   }
 }
 
@@ -31,7 +19,7 @@
     @include mobile-breakpoint {
       background-color: $brainflix-blue;
       color: $white;
-      font-family: $regular;
+      font-family: $demi;
       text-transform: uppercase;
       font-size: px-to-rem(14);
       line-height: px-to-rem(22);
@@ -89,6 +77,9 @@
   }
 }
 .header__end {
-  display: flex;
-  max-width: 100%;
+  @include mobile-breakpoint {
+    display: flex;
+    max-width: 100%;
+    margin-bottom: 16px;
+  }
 }

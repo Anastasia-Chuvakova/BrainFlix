@@ -1,19 +1,123 @@
-.hero__article {
+.hero__video {
   @include mobile-breakpoint {
-    margin: 0 16px 0 16px;
+    display: flex;
+    background-color: $black;
+    justify-content: center;
+    max-width: 100%;
+    height: 183px;
   }
 }
 
-// .likes {
-//   background-image: url(../assets/Icons/PNG/Icon-views.png);
-//   object-fit: contain;
-// }
-.paragraph {
+.hero__mainVideo {
   @include mobile-breakpoint {
-    margin: 24px 0 40px 0;
+    display: flex;
+  }
+  @include tablet-breakpoint {
+    margin: 0 24px 0 24px;
+    max-width: 700px;
+    max-height: 400px;
+    justify-content: center;
+  }
+}
+.hero__header {
+  @include mobile-breakpoint {
+    margin-top: 32px;
+  }
+}
+.hero__text {
+  @include mobile-breakpoint {
+    margin: 0 16px 0 16px;
+  }
+  @include tablet-breakpoint {
+    margin: 48px 24px 0 24px;
+  }
+}
+.hero__subheader {
+  @include mobile-breakpoint {
+    margin-right: 8px;
+    height: auto;
+    font-family: $regular;
+  }
+}
+
+.hero__nameDate {
+  @include mobile-breakpoint {
+    display: flex;
+    margin-top: 16px;
+    align-items: center;
+  }
+  @include tablet-breakpoint {
+  }
+}
+.hero__info {
+  @include mobile-breakpoint {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    border-bottom: 1px solid $mercury;
+  }
+  @include tablet-breakpoint {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 24px;
+    padding: 24px 0 24px 0;
+    align-items: center;
+  }
+}
+.btn__wrapper {
+  @include mobile-breakpoint {
+    display: flex;
+    padding: 32px 0 24px 0;
+  }
+  @include tablet-breakpoint {
+    padding: 0;
+
+    //justify-content: space-evenly;
+  }
+}
+.likes-btn {
+  border-color: transparent;
+  background-color: transparent;
+  & img {
+    object-fit: contain;
+    object-position: center;
+  }
+}
+.totalLikes {
+  border-color: transparent;
+  background-color: transparent;
+  max-width: 4rem;
+}
+.views-btn {
+  border-color: transparent;
+  background-color: transparent;
+  & img {
+    object-fit: contain;
+    object-position: center;
+  }
+}
+.totalViews {
+  border-color: transparent;
+  background-color: transparent;
+  max-width: 4rem;
+  @include mobile-breakpoint {
+    margin-right: 24px;
+  }
+}
+.hero__paragraph {
+  @include mobile-breakpoint {
+    padding: 24px 0 40px 0;
     color: $black;
-    h4 {
-      font-family: $regular;
-    }
+    font-family: $regular;
+  }
+
+  @include tablet-breakpoint {
+    margin-right: 12rem;
+    padding: 40px 0 64px 0;
+  }
+}
+.hero__labels {
+  @include mobile-breakpoint {
+    font-family: $regular;
   }
 }

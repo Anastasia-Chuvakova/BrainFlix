@@ -2,12 +2,9 @@ import React from "react";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Users from "./components/Users";
-import Footer from "./components/Footer";
 import Videos from "./components/Videos";
-import MainVideo from "./components/MainVideo";
-//import CommentsForm from "./components/CommentsForm";
-//import VideoList from ".components/VideoList";
 
+import "./assets/Video/BrainStation Sample Video.mp4";
 import "./styles/styles.css";
 
 function App() {
@@ -16,13 +13,9 @@ function App() {
       <Header />
       <Hero />
       <main>
-        <section className="comments__wrapper">
-          <Users />
-        </section>
-        <MainVideo />
+        <Users />
         <Videos />
       </main>
-      <Footer />
     </div>
   );
 }

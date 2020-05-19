@@ -115,6 +115,7 @@ class Videos extends React.Component {
   render() {
     return (
       <div className="VideoList">
+        <h5 className="side__labels labels ">next video</h5>
         <VideoLists videoLists={this.state.videoLists} />
       </div>
     );

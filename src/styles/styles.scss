@@ -1,12 +1,15 @@
 @import "partials/_globalVariables";
+@import "partials/_fonts";
 @import "partials/_mixins";
 @import "partials/_header";
-@import "partials/videoStyles";
-@import "partials/commentsStyles";
+@import "partials/_videoStyles";
+@import "partials/_commentsStyles";
 @import "partials/_hero";
 
 html {
   box-sizing: border-box;
+  margin: 0;
+  display: flex;
 }
 @function px-to-rem($px) {
   @return ($px / 16) + rem;
@@ -49,7 +52,7 @@ html {
   }
   .subheader {
     font-size: px-to-rem(16);
-    line-height: px-to-rem(68);
+    line-height: px-to-rem(24);
   }
   .paragraph {
     font-size: px-to-rem(14);

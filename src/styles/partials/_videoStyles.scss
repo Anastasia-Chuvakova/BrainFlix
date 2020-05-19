@@ -12,32 +12,64 @@
 .side__wrapper {
   @include mobile-breakpoint {
     display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-bottom: 24px;
+
+    @include tablet-breakpoint {
+      padding-bottom: 24px;
+    }
   }
 }
-.side__videos {
+.side__videos img {
   @include mobile-breakpoint {
-    //max-width: auto;
+    width: 120px;
+    height: 70px;
     display: flex;
-    margin: 0 16px 0 16px;
+    border-radius: 4px;
   }
 }
+
 .side__info {
   display: flex;
   @include mobile-breakpoint {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    margin-left: 16px;
+  }
+  @include tablet-breakpoint {
+    width: 235px;
+    height: 70px;
   }
 }
 
-.side__videos img {
-  //display: flex;
-  object-fit: contain;
-  max-width: 10%;
+.side__subheader {
+  @include mobile-breakpoint {
+    display: flex;
+    font-family: $bold;
+    color: $black;
+    margin-bottom: 8px;
+  }
+}
+.side__paragraph {
+  @include mobile-breakpoint {
+    font-family: $regular;
+    color: $black;
+  }
 }
 
-.main-video img {
-  display: flex;
-  object-fit: contain;
-  max-width: 10%;
+// .main-video img {
+//   @include mobile-breakpoint {
+//     display: flex;
+//     object-fit: contain;
+//     max-width: 10%;
+//     border-radius: 4px;
+//   }
+// }
+
+.side__labels {
+  @include mobile-breakpoint {
+    font-family: $regular;
+    padding: 40px 0 40px 0;
+  }
 }
