@@ -1,5 +1,6 @@
 import React from "react";
 import UserLists from "./UserLists";
+import Videos from "./Videos";
 
 // array of data to loop through
 class Users extends React.Component {

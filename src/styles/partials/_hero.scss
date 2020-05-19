@@ -42,6 +42,9 @@
   @include tablet-breakpoint {
     margin: 48px 24px 0 24px;
   }
+  @include desktop-breakpoint {
+    flex-direction: column;
+  }
 }
 .hero__subheader {
   @include mobile-breakpoint {
