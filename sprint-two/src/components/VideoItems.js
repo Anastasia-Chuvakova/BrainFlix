@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function VideoItems({ id, title, path, isActive }) {
   return (
     <Link
-      to={`/video/${id}`}
+      to={`/videos/${id}`}
       id={id}
       className={`video-item ${isActive && "video-item--is-active"}`}
     >

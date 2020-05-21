@@ -14,12 +14,12 @@ function ActiveVideo(props) {
       <div className="active-video__text-wrapper">
         <h1 className="active-video__title">{props.video.title}</h1>
         <h2 className="active-video__desc">{props.video.channel}</h2>
-        <p className="active-video__desc">{props.video.image}</p>
+        {/* <img className="active-video__desc">{props.video.image}</img> */}
         <p className="active-video__desc">{props.video.description}</p>
         <p className="active-video__desc">{props.video.views}</p>
         <p className="active-video__desc">{props.video.likes}</p>
         <p className="active-video__desc">{props.video.duration}</p>
-        <p className="active-video__vid">{props.video.video}</p>
+        <video className="active-video__vid">{props.video.video}</video>
         <p className="active-video__desc">{props.video.timestamp}</p>
         <p className="active-video__vid">{props.video.comments}</p>
       </div>
