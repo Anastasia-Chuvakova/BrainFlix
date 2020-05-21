@@ -1,0 +1,88 @@
+.header__wrapper {
+  @include mobile-breakpoint {
+    margin: 0 16px 0 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 169px;
+  }
+  @include tablet-breakpoint {
+    flex-direction: row;
+    margin: 0 24px 0 24px;
+    height: 80px;
+  }
+  @include desktop-breakpoint {
+    margin: 0 200px 0 200px;
+  }
+}
+
+.header {
+  &__button {
+    @include mobile-breakpoint {
+      background-color: $brainflix-blue;
+      color: $white;
+      font-family: $demi;
+      text-transform: uppercase;
+      font-size: px-to-rem(14);
+      line-height: px-to-rem(22);
+      padding: 14px;
+      border-color: $brainflix-blue;
+      border-radius: 4px;
+      width: 100%;
+    }
+  }
+  &__link {
+    @include mobile-breakpoint {
+      display: flex;
+      align-items: center;
+      object-fit: cover;
+      height: 48px;
+      margin: 0;
+    }
+    @include tablet-breakpoint {
+      margin-right: 169px;
+    }
+  }
+  &__search {
+    @include mobile-breakpoint {
+      display: flex;
+      margin: 0;
+      width: 100%;
+      margin-bottom: 8px;
+    }
+    @include tablet-breakpoint {
+      margin-right: 24px;
+    }
+  }
+}
+.search-box {
+  @include mobile-breakpoint {
+    display: flex;
+    rows: 1;
+    margin: 0;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 16px;
+    background-image: url(../assets/Icons/PNG/Icon-search.png);
+    background-position: 5px 50%;
+    background-repeat: no-repeat;
+    background-size: auto 80%;
+    //padding: 5px 0 5px 30px;
+    padding-left: 30px;
+  }
+}
+.user__icon {
+  @include mobile-breakpoint {
+    object-fit: contain;
+    max-width: 20%;
+    margin-left: 16px;
+  }
+}
+.header__end {
+  @include mobile-breakpoint {
+    display: flex;
+    max-width: 100%;
+    margin-bottom: 16px;
+  }
+}

@@ -1,0 +1,226 @@
+.comment__wrapper {
+  @include mobile-breakpoint {
+    display: flex;
+    margin: 0 16px 0 16px;
+    flex-direction: column;
+    border-bottom: 1px solid $mercury;
+  }
+  @include tablet-breakpoint {
+    margin: 0 24px 0 24px;
+    padding-bottom: 24px;
+  }
+}
+.comment__text {
+  max-width: 440px;
+  max-height: 40px;
+  padding: 16px;
+  border-radius: 4px;
+  padding-right: 4rem;
+  font-family: $regular;
+  color: $black;
+  font-size: 14px;
+  line-height: 18px;
+}
+.comment__Label {
+  @include mobile-breakpoint {
+    text-transform: uppercase;
+    font-family: $demi;
+    color: $silver;
+  }
+}
+
+.comment__container {
+  @include mobile-breakpoint {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.comment__subheader {
+  @include mobile-breakpoint {
+    padding-bottom: 32px;
+    font-family: $demi;
+    color: $black;
+  }
+}
+.conversation__wrapper {
+  display: flex;
+  border-bottom: 1px solid $mercury;
+
+  @include mobile-breakpoint {
+    padding: 24px 0 24px 0;
+  }
+  @include tablet-breakpoint {
+    padding: 32px 0 32px 0;
+  }
+}
+
+.conversation__container {
+  width: 100%;
+  @include mobile-breakpoint {
+    display: flex;
+    flex-direction: column;
+  }
+  @include tablet-breakpoint {
+    margin-right: 40px;
+  }
+}
+.conversation__info {
+  @include mobile-breakpoint {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  @include tablet-breakpoint {
+    justify-content: left;
+  }
+}
+
+.header {
+  @include mobile-breakpoint {
+    font-family: $bold;
+    color: $black;
+  }
+}
+
+.comment__form {
+  @include mobile-breakpoint {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include tablet-breakpoint {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  & .comment__form-left {
+    @include mobile-breakpoint {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: 16px;
+    }
+    @include tablet-breakpoint {
+      width: 100%;
+      margin-bottom: 0;
+    }
+  }
+  & .comment__form-right {
+    & button {
+      justify-content: center;
+      max-width: 524px;
+      margin-left: 0;
+      margin-right: 0;
+    }
+    @include mobile-breakpoint {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: 24px;
+    }
+    @include tablet-breakpoint {
+      width: 100%;
+      margin-bottom: 0;
+
+      & button {
+        margin-right: 40px;
+        margin-left: 16px;
+      }
+    }
+  }
+}
+
+.comment__button {
+  display: flex;
+  @include mobile-breakpoint {
+    text-align: center;
+    border-color: $brainflix-blue;
+    background-color: $brainflix-blue;
+    color: $white;
+    font-family: $demi;
+    text-transform: uppercase;
+    font-size: px-to-rem(14);
+    line-height: px-to-rem(22);
+    border-radius: 4px;
+    padding: 16px 48px 16px 48px;
+  }
+
+  @include tablet-breakpoint {
+    max-width: 160px;
+    margin-top: 20px;
+    margin-left: 16px;
+    margin-right: 40px;
+  }
+}
+
+.conversation__subheader {
+  @include mobile-breakpoint {
+    font-family: $demi;
+    color: $black;
+  }
+  @include tablet-breakpoint {
+    padding-right: 8px;
+  }
+}
+.conversation__labels {
+  @include mobile-breakpoint {
+    font-family: $regular;
+    display: flex;
+    align-items: center;
+    color: $mercury;
+  }
+}
+.conversation__paragraph {
+  @include mobile-breakpoint {
+    font-family: $regular;
+    color: $black;
+  }
+}
+
+.comment__icon {
+  @include mobile-breakpoint {
+    display: flex;
+    object-fit: contain;
+    img {
+      @include mobile-breakpoint {
+        margin-right: 16px;
+        max-width: 5rem;
+        margin-bottom: 5rem;
+        @include tablet-breakpoint {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.users__icon {
+  @include mobile-breakpoint {
+    display: flex;
+    object-fit: contain;
+    align-items: flex-start;
+    img {
+      @include mobile-breakpoint {
+        margin-right: 16px;
+        max-width: 4rem;
+      }
+    }
+  }
+}
+
+.UserList {
+  @include mobile-breakpoint {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 16px 0 16px;
+  }
+  @include tablet-breakpoint {
+    margin: 0 24px 0 24px;
+  }
+}
