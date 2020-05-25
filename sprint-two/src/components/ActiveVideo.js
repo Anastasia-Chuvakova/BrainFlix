@@ -1,29 +1,91 @@
 import React from "react";
+import CommentForm from "./CommentForm";
+import SideVideos from "./SideVideos";
+import moment from "moment";
 
 function ActiveVideo(props) {
-  if (!props.video) {
-    return <p>Loading...</p>;
+  if (props.video.comments === undefined) {
+    return <p>LOADING</p>;
   }
+
   return (
-    <div className="active-video">
-      <video
-        className="active-video__vid"
-        src={props.video.path}
-        alt={props.video.title}
-      />
-      <div className="active-video__text-wrapper">
-        <h1 className="active-video__title">{props.video.title}</h1>
-        <h2 className="active-video__desc">{props.video.channel}</h2>
-        {/* <img className="active-video__desc">{props.video.image}</img> */}
-        <p className="active-video__desc">{props.video.description}</p>
-        <p className="active-video__desc">{props.video.views}</p>
-        <p className="active-video__desc">{props.video.likes}</p>
-        <p className="active-video__desc">{props.video.duration}</p>
-        <video className="active-video__vid">{props.video.video}</video>
-        <p className="active-video__desc">{props.video.timestamp}</p>
-        <p className="active-video__vid">{props.video.comments}</p>
+    <>
+      <div className="active-video">
+        <video
+          className="active-vid__img"
+          src={
+            props.video.video + "?api_key=03170a68-7fa6-4c3e-90db-528536e95c48"
+          }
+          alt={props.video.title}
+          poster={props.video.image}
+          controls
+        />{" "}
       </div>
-    </div>
+      <section className="main__inf">
+        <div className="active-video__txt-wrp">
+          <h1 className="active-vid__title header">{props.video.title}</h1>
+          <div className="activ-vid__inf">
+            <div className="activ-vid__nameDate">
+              <h2 className="active-vid__channel subheader">
+                By {props.video.channel}
+              </h2>
+              <h2 className="active-vid__date subheader">
+                {moment(props.video.timestamp).format("MM/DD/YYYY")}
+              </h2>
+            </div>
+            <div className="views-likes__wrp">
+              <img
+                className="views__icon"
+                src={require("./../assets/Icons/PNG/Icon-views.png")}
+                alt="icon"
+              />
+              <h2 className="active-vid__views subheader">
+                {props.video.views}
+              </h2>
+              <img
+                className="likes__icon"
+                src={require("./../assets/Icons/PNG/Icon-likes.png")}
+                alt="icon"
+              />
+              <h2 className="active-vid__likes subheader">
+                {props.video.likes}
+              </h2>
+            </div>
+          </div>
+
+          <p className="active-vid__desc paragraph">
+            {props.video.description}
+          </p>
+        </div>
+        <div>
+          <CommentForm />
+          {props.video.comments.map((comment) => (
+            <div className="conversation__wrapper ">
+              <div>
+                <img
+                  className="users__icon"
+                  src={require("../assets/Icons/PNG/usericon-grey.png")}
+                  alt="icon"
+                />
+              </div>
+              <div className="conversation__container">
+                <div className="conversation__info">
+                  <h2 className="conversation__username subheader">
+                    {comment.name}
+                  </h2>
+                  <h2 className="conversation__date subheader">
+                    {moment(comment.timestamp).format("MM/DD/YYYY")}
+                  </h2>
+                </div>
+                <p className="conversation__usercomment paragraph">
+                  {comment.comment}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+    </>
   );
 }
 

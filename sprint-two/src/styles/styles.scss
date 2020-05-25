@@ -4,35 +4,42 @@
 @import "partials/_header";
 @import "partials/_videoStyles";
 @import "partials/_commentsStyles";
-@import "partials/_hero";
-
+@import "partials/uploadPage";
+@import "partials/detailsPage";
+@import "partials/activeVideoPlayer";
 html {
   box-sizing: border-box;
   margin: 0;
-  display: flex;
+}
+body {
+  width: 100%;
 }
 @function px-to-rem($px) {
   @return ($px / 16) + rem;
 }
 
 @include mobile-breakpoint {
-  .header__wrapper {
+  .header {
     font-size: px-to-rem(24);
     line-height: px-to-rem(32);
+    color: black;
   }
 
   .subheader {
     font-size: px-to-rem(14);
     line-height: px-to-rem(22);
   }
+
   .paragraph {
     font-size: px-to-rem(13);
     line-height: px-to-rem(18);
   }
+
   .info {
     font-size: px-to-rem(13);
     line-height: px-to-rem(18);
   }
+
   .labels {
     font-size: px-to-rem(12);
     line-height: px-to-rem(20);
@@ -42,22 +49,21 @@ html {
 }
 
 @include tablet-breakpoint {
-  h1.header {
+  .header {
     font-size: px-to-rem(36);
     line-height: px-to-rem(44);
   }
-  h2.header {
-    font-size: px-to-rem(24);
-    line-height: px-to-rem(32);
-  }
+
   .subheader {
     font-size: px-to-rem(16);
     line-height: px-to-rem(24);
   }
+
   .paragraph {
     font-size: px-to-rem(14);
     line-height: px-to-rem(22);
   }
+
   .info {
     font-size: px-to-rem(14);
     line-height: px-to-rem(20);
@@ -65,9 +71,9 @@ html {
 }
 
 @include desktop-breakpoint {
-  header {
-    font-size: px-to-rem(60);
-    line-height: px-to-rem(68);
+  .header {
+    font-size: px-to-rem(36);
+    line-height: px-to-rem(44);
   }
 }
 
@@ -78,14 +84,4 @@ h4,
 h5 {
   margin: 0;
   display: flex;
-}
-
-.text__container {
-  @include mobile-breakpoint {
-    display: flex;
-    flex-direction: column;
-  }
-  @include desktop-breakpoint {
-    flex-direction: row;
-  }
 }

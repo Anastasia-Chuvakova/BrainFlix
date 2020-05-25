@@ -1,75 +1,83 @@
-.VideoList {
+.main__inf {
+  @include desktop-breakpoint {
+    width: 712px;
+    margin-left: 175px;
+  }
+}
+.side__wrp {
+  @include desktop-breakpoint {
+    width: 25%;
+  }
+}
+.side-vid {
   @include mobile-breakpoint {
     margin: 0 16px 0 16px;
   }
   @include tablet-breakpoint {
     margin: 0 24px 0 24px;
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
   }
 }
-.side__wrapper {
-  @include mobile-breakpoint {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    padding-bottom: 24px;
 
-    @include tablet-breakpoint {
-      padding-bottom: 24px;
-    }
+.side-vid__header {
+  background: none;
+  border: none;
+  cursor: pointer;
+  @include mobile-breakpoint {
+    font-family: $regular;
+    padding: 40px 0 40px 0;
   }
 }
-.side__videos img {
+.video-item__vid {
   @include mobile-breakpoint {
     width: 120px;
     height: 70px;
     display: flex;
     border-radius: 4px;
+    object-fit: fill;
   }
 }
 
-.side__info {
-  display: flex;
+.side-vid__wrp {
+  @include mobile-breakpoint {
+    margin: 0;
+    display: flex;
+    height: 70px;
+    margin-bottom: 24px;
+  }
+}
+
+.side-vid__inf {
   @include mobile-breakpoint {
     display: flex;
     flex-direction: column;
-    margin-left: 16px;
+    max-width: 100%;
+    margin: 2px 0 2px 16px;
   }
   @include tablet-breakpoint {
-    width: 235px;
-    height: 70px;
+    width: 190px;
   }
 }
 
-.side__subheader {
+.side-vid__title {
   @include mobile-breakpoint {
-    display: flex;
     font-family: $bold;
     color: $black;
-    margin-bottom: 8px;
+    line-height: none;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  @include tablet-breakpoint {
+    font-family: $demi;
   }
 }
-.side__paragraph {
+
+.side-vid__channel {
   @include mobile-breakpoint {
     font-family: $regular;
     color: $black;
   }
 }
-
-// .main-video img {
-//   @include mobile-breakpoint {
-//     display: flex;
-//     object-fit: contain;
-//     max-width: 10%;
-//     border-radius: 4px;
-//   }
-// }
-
-.side__labels {
-  @include mobile-breakpoint {
-    font-family: $regular;
-    padding: 40px 0 40px 0;
-  }
+a:link {
+  text-decoration: none !important;
 }

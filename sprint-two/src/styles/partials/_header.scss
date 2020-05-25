@@ -6,32 +6,31 @@
     align-items: center;
     justify-content: space-evenly;
     height: 169px;
+    border-bottom: 2px solid $mercury;
+    padding-bottom: 10px;
+    width: 100%;
   }
   @include tablet-breakpoint {
     flex-direction: row;
     margin: 0 24px 0 24px;
     height: 80px;
+    padding: 0;
   }
   @include desktop-breakpoint {
     margin: 0 200px 0 200px;
   }
 }
-
-.header {
-  &__button {
-    @include mobile-breakpoint {
-      background-color: $brainflix-blue;
-      color: $white;
-      font-family: $demi;
-      text-transform: uppercase;
-      font-size: px-to-rem(14);
-      line-height: px-to-rem(22);
-      padding: 14px;
-      border-color: $brainflix-blue;
-      border-radius: 4px;
-      width: 100%;
-    }
+.header__search-btn-icon {
+  @include mobile-breakpoint {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
+  @include tablet-breakpoint {
+    flex-direction: row;
+  }
+}
+.header {
   &__link {
     @include mobile-breakpoint {
       display: flex;
@@ -44,45 +43,75 @@
       margin-right: 169px;
     }
   }
-  &__search {
-    @include mobile-breakpoint {
-      display: flex;
-      margin: 0;
-      width: 100%;
-      margin-bottom: 8px;
-    }
-    @include tablet-breakpoint {
-      margin-right: 24px;
-    }
+}
+.header__search-wrp {
+  @include mobile-breakpoint {
+    display: flex;
+    margin: 0;
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  @include tablet-breakpoint {
+    margin: 16px 24px 16px 0;
+    width: 252px;
+  }
+  @include desktop-breakpoint {
+    width: 252px;
   }
 }
 .search-box {
   @include mobile-breakpoint {
     display: flex;
-    rows: 1;
     margin: 0;
     border-radius: 4px;
+    border: 1px solid $mercury;
+    font-family: $regular;
+    color: $black;
     width: 100%;
-    font-size: 16px;
     background-image: url(../assets/Icons/PNG/Icon-search.png);
-    background-position: 5px 50%;
+    object-fit: contain;
+    background-position: 14px 44%;
     background-repeat: no-repeat;
-    background-size: auto 80%;
-    //padding: 5px 0 5px 30px;
-    padding-left: 30px;
+    background-size: auto 35%;
+    padding-left: 32px;
+    height: 40px;
+  }
+}
+
+.header__end {
+  a {
+    @include mobile-breakpoint {
+      display: flex;
+      flex-direction: row;
+      max-width: 100%;
+      align-items: center;
+      text-decoration: none;
+      max-height: 43px;
+    }
+  }
+}
+
+.header__button {
+  @include mobile-breakpoint {
+    background-color: $brainflix-blue;
+    color: $white;
+    font-family: $regular;
+    text-transform: uppercase;
+    font-size: 12px;
+    height: 43px;
+    border-color: $brainflix-blue;
+    border-radius: 4px;
+    width: 224px;
+  }
+  @include tablet-breakpoint {
+    width: 103px;
   }
 }
 .user__icon {
   @include mobile-breakpoint {
     object-fit: contain;
-    max-width: 20%;
-    margin-left: 16px;
-  }
-}
-.header__end {
-  @include mobile-breakpoint {
-    display: flex;
-    max-width: 100%;
-    margin-bottom: 16px;
+    max-width: 3.5rem;
+
+    margin-left: 10px;
   }
 }
