@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 /*
-
+I WAS NOT SURE WHAT WAS MEANT BY THE VIDEO DETAILS PAGE AND DID NOT FIND ANY MOCKUPS FOR STYLING, SO I DECIDED TO KEEP IT HERE.
 */
 
 class VideoDetailsPage extends React.Component {
