@@ -8,7 +8,7 @@
     height: 169px;
     border-bottom: 2px solid $mercury;
     padding-bottom: 10px;
-    width: 100%;
+    max-width: 100%;
   }
   @include tablet-breakpoint {
     flex-direction: row;
@@ -48,7 +48,7 @@
   @include mobile-breakpoint {
     display: flex;
     margin: 0;
-    width: 100%;
+    width: 285px;
     margin-bottom: 8px;
   }
   @include tablet-breakpoint {
@@ -112,6 +112,6 @@
     object-fit: contain;
     max-width: 3.5rem;
 
-    margin-left: 10px;
+    margin-left: 5px;
   }
 }

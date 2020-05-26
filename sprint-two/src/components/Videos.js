@@ -14,6 +14,7 @@ class Videos extends React.Component {
   };
 
   componentDidMount() {
+    console.log("PROPS", this.props);
     const paramId = this.props.match.params.id;
     const promise = axios.get(`${SEARCH_URL}`);
     promise

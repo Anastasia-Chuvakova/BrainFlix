@@ -32,7 +32,7 @@
     height: 169px;
     border-bottom: 2px solid #e1e1e1;
     padding-bottom: 10px;
-    width: 100%;
+    max-width: 100%;
   }
 }
 
@@ -105,7 +105,7 @@
     display: -ms-flexbox;
     display: flex;
     margin: 0;
-    width: 100%;
+    width: 285px;
     margin-bottom: 8px;
   }
 }
@@ -188,7 +188,7 @@
     -o-object-fit: contain;
        object-fit: contain;
     max-width: 3.5rem;
-    margin-left: 10px;
+    margin-left: 5px;
   }
 }
 
@@ -700,6 +700,10 @@ a:link {
   }
 }
 
+.uploadPage__content {
+  border-bottom: 1px solid #e1e1e1;
+}
+
 @media screen and (min-width: 320px) {
   .uploadPage__content {
     margin: 0 16px 0 16px;
@@ -710,7 +714,7 @@ a:link {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 100%;
+    max-width: 100%;
   }
 }
 
@@ -845,7 +849,7 @@ a:link {
     font-family: "Avenir Next Regular";
     color: #323232;
     margin-bottom: 24px;
-    width: 288px;
+    width: 275px;
   }
 }
 
@@ -872,14 +876,13 @@ a:link {
 @media screen and (min-width: 768px) {
   .uploadPage__form-desc-wrap {
     padding-bottom: 40px;
-    border-bottom: 2px solid #e1e1e1;
     width: 90%;
   }
 }
 
 @media screen and (min-width: 320px) {
   .uploadPage__desc {
-    height: 143px;
+    height: 129px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -891,7 +894,7 @@ a:link {
     border: 2px solid #e1e1e1;
     font-family: "Avenir Next Regular";
     color: #323232;
-    width: 288px;
+    width: 275px;
   }
 }
 

@@ -44,16 +44,15 @@ const VideoUploadPage = () => {
               name="videoDescription"
             ></textarea>
           </div>
-
-          <div className="UploadPage__btn-wrp">
-            <button className="publish-btn">publish</button>
-            <NavLink className="link-home" to="/" exact>
-              <button type="submit" className="cxl-btn">
-                cancel
-              </button>
-            </NavLink>
-          </div>
         </div>
+      </div>
+      <div className="UploadPage__btn-wrp">
+        <button className="publish-btn">publish</button>
+        <NavLink className="link-home" to="/" exact>
+          <button type="submit" className="cxl-btn">
+            cancel
+          </button>
+        </NavLink>
       </div>
     </>
   );

@@ -1,6 +1,5 @@
 import React from "react";
 import CommentForm from "./CommentForm";
-import SideVideos from "./SideVideos";
 import moment from "moment";
 
 function ActiveVideo(props) {

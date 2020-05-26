@@ -21,11 +21,12 @@
   }
 }
 .uploadPage__content {
+  border-bottom: 1px solid $mercury;
   @include mobile-breakpoint {
     margin: 0 16px 0 16px;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    max-width: 100%;
   }
   @include tablet-breakpoint {
     margin: 0 24px 0 24px;
@@ -113,7 +114,7 @@
     font-family: $regular;
     color: $black;
     margin-bottom: 24px;
-    width: 288px;
+    width: 275px;
   }
   @include tablet-breakpoint {
     width: 100%;
@@ -128,13 +129,13 @@
   }
   @include tablet-breakpoint {
     padding-bottom: 40px;
-    border-bottom: 2px solid $mercury;
+    // border-bottom: 2px solid $mercury;
     width: 90%;
   }
 }
 .uploadPage__desc {
   @include mobile-breakpoint {
-    height: 143px;
+    height: 129px;
     display: flex;
     align-items: center;
     padding: 14px 0 14px 14px;
@@ -142,7 +143,7 @@
     border: 2px solid $mercury;
     font-family: $regular;
     color: $black;
-    width: 288px;
+    width: 275px;
   }
   @include tablet-breakpoint {
     width: 100%;

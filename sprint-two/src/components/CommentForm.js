@@ -1,6 +1,4 @@
 import React from "react";
-import SideVideos from "./SideVideos";
-import moment from "moment";
 import axios from "axios";
 
 // array of data to loop through
@@ -10,8 +8,6 @@ class CommentForm extends React.Component {
   };
 
   render() {
-    const self = this;
-
     function displayComment(event) {
       event.preventDefault();
 
@@ -21,12 +17,12 @@ class CommentForm extends React.Component {
         comment: commentTextVal,
         name: "Anonymous",
       };
-
+      //would like to use params instead though was unable to access it
+      //I am getting the window url and separating the last part with the video ID
       let videoId = window.location.href.toString();
-
       videoId = videoId.substr(videoId.lastIndexOf("/") + 1);
 
-      //post new comment object to the api
+      //post new comment object to the api using video ID
       axios({
         method: "post",
         url:
@@ -37,6 +33,8 @@ class CommentForm extends React.Component {
           comment: newComment.comment,
           name: newComment.name,
         },
+      }).then((res) => {
+        console.log(res);
       });
     }
 

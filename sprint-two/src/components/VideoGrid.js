@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 
 export default function VieoGrid({ videoData, activeVideo, routerProps }) {
   console.log(activeVideo);
+  //using same sort method as my list to find which video is on top
+  //then assigning it to nextVideo so I can put it in the url of the details page
   let nextVideoId = 0;
   let nextVideo = videoData
     .filter((video) => video.id !== activeVideo)

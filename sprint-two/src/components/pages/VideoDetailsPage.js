@@ -1,6 +1,8 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import axios from "axios";
+/*
+
+*/
 
 class VideoDetailsPage extends React.Component {
   state = {
@@ -8,8 +10,9 @@ class VideoDetailsPage extends React.Component {
   };
 
   componentWillMount() {
+    //wanted to use something like params.id for next video though 'this' was undefined on details page
+    //found alternate solution online to pass the video ID in the url and assign it to a variable
     let videoId = window.location.href.toString();
-
     videoId = videoId.substr(videoId.lastIndexOf("=") + 1);
 
     let promise = axios.get(
