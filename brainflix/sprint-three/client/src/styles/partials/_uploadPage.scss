@@ -1,0 +1,210 @@
+.uploadPage__title-wrp {
+  @include mobile-breakpoint {
+    padding: 24px 0 32px 0px;
+    margin: 0 16px 0 16px;
+  }
+  @include tablet-breakpoint {
+    padding: 48px 0 40px 0;
+    margin: 0 24px 0 24px;
+    border-bottom: 2px solid $mercury;
+  }
+  @include desktop-breakpoint {
+  }
+}
+
+.uploadPage__title {
+  @include mobile-breakpoint {
+    display: flex;
+    font-family: $bold;
+    color: black;
+    margin: 0;
+  }
+}
+.uploadPage__content {
+  border-bottom: 1px solid $mercury;
+  @include mobile-breakpoint {
+    margin: 0 16px 0 16px;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+  }
+  @include tablet-breakpoint {
+    margin: 0 24px 0 24px;
+    padding-top: 40px;
+  }
+  @include desktop-breakpoint {
+    flex-direction: row;
+  }
+}
+.uploadPage-vid__inf {
+  @include mobile-breakpoint {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  @include desktop-breakpoint {
+    margin-right: 24px;
+  }
+}
+
+.uploadPage__form {
+  @include mobile-breakpoint {
+    width: 100%;
+  }
+}
+
+.uploadPage__vid-ttl {
+  @include mobile-breakpoint {
+    display: flex;
+    font-family: $regular;
+  }
+}
+.hero__mainVideo {
+  @include mobile-breakpoint {
+    display: flex;
+    width: 288px;
+    height: 153px;
+    border-radius: 4px;
+  }
+  @include tablet-breakpoint {
+    display: flex;
+    justify-content: left;
+    width: 344px;
+    height: 183px;
+  }
+}
+.UploadVideo {
+  @include mobile-breakpoint {
+    max-width: 100%;
+    height: 153px;
+    border-radius: 4px;
+  }
+}
+.uploadPage__form-ttl-wrp {
+  @include mobile-breakpoint {
+    display: flex;
+    flex-direction: column;
+    padding-top: 32px;
+  }
+  @include tablet-breakpoint {
+    padding-top: 40px;
+
+    width: 90%;
+  }
+  @include desktop-breakpoint {
+    padding-top: 0;
+  }
+}
+
+.uploadPage__form-label {
+  @include mobile-breakpoint {
+    font-family: $regular;
+  }
+}
+
+.uploadPage__form-field {
+  @include mobile-breakpoint {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding-left: 14px;
+    border-radius: 4px;
+    border: 2px solid $mercury;
+    font-family: $regular;
+    color: $black;
+    margin-bottom: 24px;
+    width: 275px;
+  }
+  @include tablet-breakpoint {
+    width: 100%;
+  }
+}
+.uploadPage__form-desc-wrap {
+  @include mobile-breakpoint {
+    display: flex;
+    flex-direction: column;
+    max-height: auto;
+    padding-bottom: 32px;
+  }
+  @include tablet-breakpoint {
+    padding-bottom: 40px;
+    // border-bottom: 2px solid $mercury;
+    width: 90%;
+  }
+}
+.uploadPage__desc {
+  @include mobile-breakpoint {
+    height: 129px;
+    display: flex;
+    align-items: center;
+    padding: 14px 0 14px 14px;
+    border-radius: 4px;
+    border: 2px solid $mercury;
+    font-family: $regular;
+    color: $black;
+    width: 275px;
+  }
+  @include tablet-breakpoint {
+    width: 100%;
+  }
+  @include desktop-breakpoint {
+    height: 63px;
+  }
+}
+
+.UploadPage__btn-wrp {
+  @include mobile-breakpoint {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    width: 288px;
+  }
+  @include tablet-breakpoint {
+    flex-direction: row-reverse;
+    padding-top: 40px;
+    width: 90%;
+  }
+}
+.publish-btn {
+  @include mobile-breakpoint {
+    background-color: $brainflix-blue;
+    color: $white;
+    font-family: $regular;
+    text-transform: uppercase;
+    font-size: 12px;
+    height: 40px;
+    width: 100%;
+    border-color: $brainflix-blue;
+    border-radius: 4px;
+    padding: 0;
+    margin-bottom: 24px;
+  }
+  @include tablet-breakpoint {
+    width: 160px;
+    height: 40px;
+  }
+}
+
+.cxl-btn {
+  @include mobile-breakpoint {
+    background-color: transparent;
+    color: $brainflix-blue;
+    font-family: $demi;
+    text-transform: uppercase;
+    font-size: 12px;
+    height: 40px;
+    width: 100%;
+    border-color: transparent;
+    border-radius: 4px;
+    padding: 0;
+  }
+  @include tablet-breakpoint {
+    margin-right: 48px;
+  }
+}
+.link-home {
+  margin: 0;
+  padding: 0;
+  height: 0;
+}
