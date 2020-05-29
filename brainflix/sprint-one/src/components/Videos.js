@@ -1,9 +1,27 @@
 import React from "react";
-import VideoLists from "./VideoLists";
+import VideoGrid from "./VideoGrid";
+import ActiveVideo from "./ActiveVideo";
+//import VideoLists from "./VideoLists";
+import axios from "axios";
 
 class Videos extends React.Component {
   state = {
+    activeVideo: null,
     videoLists: [
+      {
+        id: "0",
+        title: "BMX Rampage: 2018 Highlights",
+        description:
+          "On a gusty day in Southern Utah, a group of 25 daring mountain bikers blew the doors off what is possible on two wheels, unleashing some of the biggest moments the sport has ever seen. While mother nature only allowed for one full run before the conditions made it impossible to ride, that was all that was needed for event veteran Kyle Strait, who won the event for the second time -- eight years after his first Red Cow Rampage title",
+        channel: "By Red Cow",
+        image: require("../assets/Images/video-list-0.jpg"),
+        views: "1001023,",
+        likes: "110985",
+        duration: "type of <string>",
+        video: require("../assets/Video/BrainStation Sample Video.mp4"),
+        timestamp: "12/18/2018",
+        comments: "type of <array>",
+      },
       {
         id: "1",
         title: "Become A Travel Pro In One Easy Lesson",
@@ -13,7 +31,7 @@ class Videos extends React.Component {
         views: "0",
         likes: "0",
         duration: "1",
-        video: "mp4",
+        video: require("../assets/Video/BrainStation Sample Video.mp4"),
         timestamp: "1589576704",
         comments: "type of <array>",
       },
@@ -27,7 +45,7 @@ class Videos extends React.Component {
         views: "0",
         likes: "0",
         duration: "1",
-        video: "mp4",
+        video: require("../assets/Video/BrainStation Sample Video.mp4"),
         timestamp: "1589576704",
         comments: "type of <array>",
       },
@@ -40,7 +58,7 @@ class Videos extends React.Component {
         views: "0",
         likes: "0",
         duration: "1",
-        video: "mp4",
+        video: require("../assets/Video/BrainStation Sample Video.mp4"),
         timestamp: "1589576704",
         comments: "type of <array>",
       },
@@ -53,7 +71,7 @@ class Videos extends React.Component {
         views: "0",
         likes: "0",
         duration: "1",
-        video: "mp4",
+        video: require("../assets/Video/BrainStation Sample Video.mp4"),
         timestamp: "1589576704",
         comments: "type of <array>",
       },
@@ -66,7 +84,7 @@ class Videos extends React.Component {
         views: "0",
         likes: "0",
         duration: "1",
-        video: "mp4",
+        video: require("../assets/Video/BrainStation Sample Video.mp4"),
         timestamp: "1589576704",
         comments: "type of <array>",
       },
@@ -79,7 +97,7 @@ class Videos extends React.Component {
         views: "0",
         likes: "0",
         duration: "1",
-        video: "mp4",
+        video: require("../assets/Video/BrainStation Sample Video.mp4"),
         timestamp: "1589576704",
         comments: "type of <array>",
       },
@@ -92,7 +110,7 @@ class Videos extends React.Component {
         views: "0",
         likes: "0",
         duration: "1",
-        video: "mp4",
+        video: require("../assets/Video/BrainStation Sample Video.mp4"),
         timestamp: "1589576704",
         comments: "type of <array>",
       },
@@ -105,18 +123,58 @@ class Videos extends React.Component {
         views: "0",
         likes: "0",
         duration: "1",
-        video: "mp4",
+        video: require("../assets/Video/BrainStation Sample Video.mp4"),
         timestamp: "1589576704",
         comments: "type of <array>",
       },
     ],
   };
+  componentDidMount() {
+    const paramId = this.props.match.params.id;
+    if (paramId === undefined) {
+      this.setActiveVideo(0);
+    } else {
+      this.setActiveVideo(paramId);
+    }
+  }
+  // method to update state
+  setActiveVideo = (id) => {
+    if (id === undefined) {
+      this.setState({ activeImage: 0 });
+    } else {
+      this.setState({ activeImage: Number(id) });
+    }
+  };
+  //ASK MORE QUESTIONS ABOUT BELOW ....
+  // runs on update e.g. setState() watch out for infinite loops!
+  componentDidUpdate(prevProps) {
+    const oldId = prevProps.match.params.id;
+    const newId = this.props.match.params.id;
+
+    if (this.props.match.params.id === undefined) {
+      console.log("this.props.match.params.id", this.props.match.params.id);
+    }
+
+    if (newId !== oldId) {
+      this.setActiveImage(newId);
+    }
+  }
 
   render() {
     return (
-      <div className="VideoList">
-        <h5 className="side__labels labels ">next video</h5>
-        <VideoLists videoLists={this.state.videoLists} />
+      <div className="Video">
+        <main className="video__main">
+          <ActiveVideo video={this.state.videoData[this.state.activeVideo]} />
+
+          <VideoGrid
+            videoData={this.state.videoData}
+            handleVideoClick={this.handleVideoClick}
+            activeVideo={this.state.activeVideo}
+            routerProps={this.props}
+          />
+        </main>
+        {/* //<h5 className="side__labels labels ">next video</h5>
+        //<VideoLists videoLists={this.state.videoLists} /> */}
       </div>
     );
   }

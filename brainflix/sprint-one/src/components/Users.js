@@ -35,7 +35,7 @@ class Users extends React.Component {
 
     function displayComment(event) {
       event.preventDefault();
-      console.log("HELP");
+      //console.log("HELP");
 
       var commentTextVal = event.target.commentText.value;
       console.log(commentTextVal);
