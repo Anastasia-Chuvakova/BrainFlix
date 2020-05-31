@@ -18,9 +18,9 @@ export default function VieoGrid({ videoData, activeVideo, routerProps }) {
 
   return (
     <div className="side-vid">
-      <Link to={`/video-details?video=${nextVideoId}`} exact>
-        <button className="side-vid__header labels">next video</button>
-      </Link>
+      {/* <Link to={`/video-details?video=${nextVideoId}`} exact> */}
+      <button className="side-vid__header labels">next video</button>
+      {/* </Link> */}
 
       {videoData
         .filter((video) => video.id !== activeVideo)

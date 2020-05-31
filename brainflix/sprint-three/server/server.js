@@ -1,10 +1,18 @@
+const bodyParser = require("body-parser");
 const express = require("express");
+const fs = require("fs");
 
 const getMainVideo = require("./controller/getMainVideo");
 const getVideos = require("./controller/getVideos");
 //const getComments = require("./controller/getComments");
 
 const app = express();
+
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }));
+
+// parse application/json
+app.use(bodyParser.json());
 
 app.search(express.json());
 
@@ -18,9 +26,18 @@ app
     res.json(getVideos());
   })
   .post((req, res) => {
-    console.log(req.body);
-    // videoData.push(req.body);
-    res.json("videoData");
+    console.log("req = ", req.body);
+    console.log("res =", res);
+
+    //read video.json as var
+    // let videoData = JSON.parse(fs.readFileSync("./model/videos.json"));
+    let videoData = JSON.parse(fs.readFileSync("./model/videos.json"));
+    // videoData = JSON.parse(videoData);
+    console.log(videoData);
+    //push requ.body into json var
+    videoData.push(req.body);
+    //push new json var to file
+    fs.writeFileSync("./model/videos.json", JSON.stringify(videoData));
   })
   .put((req, res) => {
     res.send("video updated");

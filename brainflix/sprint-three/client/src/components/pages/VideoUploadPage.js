@@ -13,8 +13,40 @@ const VideoUploadPage = () => {
 
     let newUpload = {
       title: uploadTtl,
-      descrition: uploadDesc,
-      image: "https://i.imgur.com/5qyCZrD.jpg",
+      description: uploadDesc,
+      image: require("../../assets/Images/Upload-video-preview.jpg"),
+      channel: "Anon",
+      timestamp: 1590889235,
+      views: "0",
+      likes: "0",
+      video:
+        "https://ia800701.us.archive.org/26/items/SampleVideo1280x7205mb/SampleVideo_1280x720_5mb.mp4",
+      comments: [
+        {
+          name: "Micheal Lyons",
+          comment:
+            "They BLEW the ROOF off at their last show, once everyone started figuring out they were going. This is still simply the greatest opening of acconcert I have EVER witnessed.",
+          id: "1ab6d9f6-da38-456e-9b09-ab0acd9ce818",
+          likes: 0,
+          timestamp: 1544595784046,
+        },
+        {
+          name: "Gary Wong",
+          comment:
+            "Every time I see him shred I feel so motivated to get off my couch and hop on my board. He’s so talented! I wish I can ride like him one day so I can really enjoy myself!",
+          id: "cc6f173d-9e9d-4501-918d-bc11f15a8e14",
+          likes: 0,
+          timestamp: 1544595784046,
+        },
+        {
+          name: "Theodore Duncan",
+          comment:
+            "How can someone be so good!!! You can tell he lives for this and loves to do it every day. Everytime I see him I feel instantly happy! He’s definitely my favorite ever!",
+          id: "993f950f-df99-48e7-bd1e-d95003cc98f1",
+          likes: 0,
+          timestamp: 1542262984046,
+        },
+      ],
     };
 
     axios({
@@ -23,15 +55,21 @@ const VideoUploadPage = () => {
       data: {
         id: uuid(),
         title: newUpload.title,
-        descrition: newUpload.description,
+        description: newUpload.description,
         image: newUpload.image,
+        channel: newUpload.channel,
+        timestamp: newUpload.timestamp,
+        likes: newUpload.likes,
+        video: newUpload.video,
+        views: newUpload.views,
+        comments: newUpload.comments,
       },
     })
       .then((res) => {
-        console.log(res);
+        console.log("Video Post Response = ", res);
       })
       .catch((err) => {
-        console.log(err);
+        console.log("Video Post Error - ", err);
       });
   }
 
@@ -47,7 +85,6 @@ const VideoUploadPage = () => {
             <video
               className="UploadVideo"
               poster={require("../../assets/Images/Upload-video-preview.jpg")}
-              className="hero__mainVideo"
               width="100%"
               height="100%"
               border-radius="4px"
