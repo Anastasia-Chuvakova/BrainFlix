@@ -13,6 +13,5 @@ const getVideos = () => {
 
   return mappedVidData;
 };
-// console.log(getVideos());
 
 module.exports = getVideos;

@@ -15,7 +15,7 @@
 
 @media screen and (min-width: 320px) {
   .header__wrapper {
-    margin: 0 16px 0 16px;
+    padding: 0 16px 0 16px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -26,11 +26,11 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     height: 169px;
-    border-bottom: 2px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
     padding-bottom: 10px;
     max-width: 100%;
   }
@@ -42,15 +42,15 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    margin: 0 24px 0 24px;
+    padding: 0 24px 0 24px;
     height: 80px;
-    padding: 0;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .header__wrapper {
-    margin: 0 200px 0 200px;
+    margin: 0 183px;
+    padding: 0;
   }
 }
 
@@ -531,6 +531,9 @@ a:link {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -689,6 +692,12 @@ a:link {
   }
 }
 
+@media screen and (min-width: 1440px) {
+  .uploadPage__title-wrp {
+    margin: 0 183px;
+  }
+}
+
 @media screen and (min-width: 320px) {
   .uploadPage__title {
     display: -webkit-box;
@@ -722,6 +731,7 @@ a:link {
   .uploadPage__content {
     margin: 0 24px 0 24px;
     padding-top: 40px;
+    border-bottom: 2px solid #e1e1e1;
   }
 }
 
@@ -731,6 +741,7 @@ a:link {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    margin: 0 183px;
   }
 }
 
@@ -743,6 +754,12 @@ a:link {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .uploadPage-vid__inf {
+    width: 344px;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
@@ -796,9 +813,25 @@ a:link {
 
 @media screen and (min-width: 320px) {
   .UploadVideo {
-    max-width: 100%;
-    height: 153px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     border-radius: 4px;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .UploadVideo {
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .UploadVideo {
+    width: 344px;
   }
 }
 
@@ -818,7 +851,7 @@ a:link {
 @media screen and (min-width: 768px) {
   .uploadPage__form-ttl-wrp {
     padding-top: 40px;
-    width: 90%;
+    max-width: 100%;
   }
 }
 
@@ -849,13 +882,13 @@ a:link {
     font-family: "Avenir Next Regular";
     color: #323232;
     margin-bottom: 24px;
-    width: 275px;
+    max-width: 100%;
   }
 }
 
 @media screen and (min-width: 768px) {
   .uploadPage__form-field {
-    width: 100%;
+    max-width: 100%;
   }
 }
 
@@ -876,7 +909,7 @@ a:link {
 @media screen and (min-width: 768px) {
   .uploadPage__form-desc-wrap {
     padding-bottom: 40px;
-    width: 90%;
+    max-width: 100%;
   }
 }
 
@@ -894,13 +927,12 @@ a:link {
     border: 2px solid #e1e1e1;
     font-family: "Avenir Next Regular";
     color: #323232;
-    width: 275px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .uploadPage__desc {
-    width: 100%;
+    max-width: 100%;
   }
 }
 
@@ -920,7 +952,8 @@ a:link {
         -ms-flex-direction: column;
             flex-direction: column;
     padding: 0;
-    width: 288px;
+    max-width: 100%;
+    margin: 0 16px;
   }
 }
 
@@ -931,7 +964,13 @@ a:link {
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
     padding-top: 40px;
-    width: 90%;
+    margin: 0 24px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .UploadPage__btn-wrp {
+    margin: 0 183px;
   }
 }
 
@@ -983,10 +1022,6 @@ a:link {
   margin: 0;
   padding: 0;
   height: 0;
-}
-
-.video-details {
-  padding: 20px;
 }
 
 @media screen and (min-width: 1440px) {

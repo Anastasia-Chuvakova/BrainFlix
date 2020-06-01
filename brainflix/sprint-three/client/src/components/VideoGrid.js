@@ -1,10 +1,10 @@
 import React from "react";
-//import VideoItems from "./SideVideos";
 import SideVideos from "./SideVideos";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 
 export default function VieoGrid({ videoData, activeVideo, routerProps }) {
   console.log(activeVideo);
+
   //using same sort method as my list to find which video is on top
   //then assigning it to nextVideo so I can put it in the url of the details page
   let nextVideoId = 0;
@@ -18,9 +18,7 @@ export default function VieoGrid({ videoData, activeVideo, routerProps }) {
 
   return (
     <div className="side-vid">
-      {/* <Link to={`/video-details?video=${nextVideoId}`} exact> */}
       <button className="side-vid__header labels">next video</button>
-      {/* </Link> */}
 
       {videoData
         .filter((video) => video.id !== activeVideo)

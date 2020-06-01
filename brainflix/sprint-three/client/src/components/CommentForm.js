@@ -25,10 +25,11 @@ class CommentForm extends React.Component {
       //post new comment object to the api using video ID
       axios({
         method: "post",
-        url:
-          "https://project-2-api.herokuapp.com/videos/" +
-          videoId +
-          "/comments?api_key=03170a68-7fa6-4c3e-90db-528536e95c48",
+        url: "/videos" + videoId + `{data.comments}`,
+        // url:
+        //   "https://project-2-api.herokuapp.com/videos/" +
+        //   videoId +
+        //   "/comments?api_key=03170a68-7fa6-4c3e-90db-528536e95c48",
         data: {
           comment: newComment.comment,
           name: newComment.name,

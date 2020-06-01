@@ -9,6 +9,7 @@
 .active-video {
   margin: 0;
   width: 100%;
+
   @include tablet-breakpoint {
     background-color: $black;
     height: 400px;

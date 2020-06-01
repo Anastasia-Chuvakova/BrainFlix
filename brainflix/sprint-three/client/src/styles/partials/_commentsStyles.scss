@@ -137,7 +137,7 @@
 .comment__button {
   @include mobile-breakpoint {
     display: flex;
-
+    align-items: center;
     justify-content: center;
     border-color: $brainflix-blue;
     background-color: $brainflix-blue;

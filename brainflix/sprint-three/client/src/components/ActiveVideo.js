@@ -18,7 +18,7 @@ function ActiveVideo(props) {
           alt={props.video.title}
           poster={props.video.image}
           controls
-        />{" "}
+        />
       </div>
       <section className="main__inf">
         <div className="active-video__txt-wrp">

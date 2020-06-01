@@ -3,8 +3,8 @@ import VideoGrid from "./VideoGrid";
 import ActiveVideo from "./ActiveVideo";
 import axios from "axios";
 
-const API_KEY = "03170a68-7fa6-4c3e-90db-528536e95c48";
-const SEARCH_URL = `https://project-2-api.herokuapp.com/videos/?api_key=${API_KEY}`;
+// const API_KEY = "03170a68-7fa6-4c3e-90db-528536e95c48";
+// const SEARCH_URL = `https://project-2-api.herokuapp.com/videos/?api_key=${API_KEY}`;
 
 class Videos extends React.Component {
   state = {
@@ -32,10 +32,7 @@ class Videos extends React.Component {
         console.log("Error: ", err);
       });
     axios
-      .get(
-        `/videos/1af0jruup5gu`
-        //`https://project-2-api.herokuapp.com/videos/1af0jruup5gu/?api_key=${API_KEY}`
-      )
+      .get(`/videos/1af0jruup5gu`)
       .then((response) => {
         console.log(response);
         this.setState({ mainVideo: response.data });
@@ -64,12 +61,7 @@ class Videos extends React.Component {
       this.setActiveVideo(newId);
       console.log("it is done");
 
-      let promiseUpdate = axios.get(
-        "/videos/" + newId
-        //+
-        // "/?api_key=" +
-        // API_KEY
-      );
+      let promiseUpdate = axios.get("/videos/" + newId);
       promiseUpdate.then((dataAPI) => {
         console.log("NEW DATA", dataAPI);
         this.setState({
