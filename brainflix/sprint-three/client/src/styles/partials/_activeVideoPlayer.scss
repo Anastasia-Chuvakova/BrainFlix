@@ -1,12 +1,118 @@
+#video-controls {
+  @include mobile-breakpoint {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 100;
+    margin: 0 16px 8px 16px;
+    bottom: 0;
+    width: 100%;
+  }
+
+  @include tablet-breakpoint {
+    //width: 700px;
+    margin: 0 8px;
+    bottom: 0x0;
+  }
+  @include desktop-breakpoint {
+    bottom: 0;
+  }
+}
+
+.progress {
+  max-width: 100%;
+  display: flex;
+}
+.seek-bar-wrapper {
+  background-color: $black;
+  display: flex;
+  align-items: center;
+}
+#seek-bar {
+  background-color: $black;
+  -webkit-appearance: none;
+  border-radius: 10px;
+  background: black;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 4px 0 0 4px;
+  border: 1px solid $black;
+
+  @include tablet-breakpoint {
+    width: 519px;
+  }
+  @include desktop-breakpoint {
+    width: 751px;
+  }
+}
+#seek-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background: white;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+}
+#seek-bar::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  background: black;
+  height: 100%;
+  border-radius: 10px;
+}
+
+#fs {
+  @include mobile-breakpoint {
+    background-color: $black;
+    border-radius: 4px 0 0 4px;
+    border: 1px solid $black;
+    padding: 8px 16px;
+    margin-left: 8px;
+  }
+}
+
+#muteButton {
+  background-color: $black;
+  border-radius: 0 4px 4px 0;
+  border: 1px solid $black;
+  padding: 8px 16px;
+}
+
+#volume-bar {
+  opacity: 0;
+  transform: rotate(-90deg) translate(60px, -65px);
+  width: 75px;
+  transition: opacity 0.5s;
+}
+
 .video__main {
   @include desktop-breakpoint {
     display: flex;
-
     flex-wrap: wrap;
+  }
+
+  .volume-wrp {
+    display: flex;
+    max-width: 100%;
+    width: 50px;
+  }
+  .volume-wrp:hover {
+    #volume-bar {
+      opacity: 1;
+    }
+  }
+}
+#play {
+  @include mobile-breakpoint {
+    margin-right: 8px;
+    background-color: $black;
+    border-radius: 4px;
+    border: 1px solid $black;
+    padding: 8px 16px;
   }
 }
 
 .active-video {
+  position: relative;
   margin: 0;
   width: 100%;
 
@@ -135,4 +241,12 @@ video.active-vid__img {
     margin: 40px 0 64px 0;
     padding-right: 210px;
   }
+}
+.current-time {
+  color: white;
+  margin-left: 5px;
+}
+.duration {
+  color: white;
+  margin-right: 5px;
 }

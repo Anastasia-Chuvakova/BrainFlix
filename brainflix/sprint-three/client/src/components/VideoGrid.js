@@ -13,7 +13,7 @@ export default function VieoGrid({ videoData, activeVideo, routerProps }) {
     .sort((a, b) => a.id - b.id)[0];
   if (nextVideo !== undefined) {
     console.log("nextVid", nextVideo.id);
-    nextVideoId = nextVideo.id;
+    //nextVideoId = nextVideo.id;
   }
 
   return (

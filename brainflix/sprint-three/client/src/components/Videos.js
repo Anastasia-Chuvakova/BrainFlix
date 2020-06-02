@@ -3,9 +3,6 @@ import VideoGrid from "./VideoGrid";
 import ActiveVideo from "./ActiveVideo";
 import axios from "axios";
 
-// const API_KEY = "03170a68-7fa6-4c3e-90db-528536e95c48";
-// const SEARCH_URL = `https://project-2-api.herokuapp.com/videos/?api_key=${API_KEY}`;
-
 class Videos extends React.Component {
   state = {
     activeVideo: null,
